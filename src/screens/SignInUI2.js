@@ -34,11 +34,6 @@ export default class LoginUI extends Component {
   render() {
     return (
         <View style={{flex:1, paddingHorizontal: 50}}>
-      <View style={{flexDirection: 'row', height: 30}}>
-          <View style={{width: 30, borderWidth: 1, position: 'absolute', left: 0, top:0, bottom: 0,}}/>
-          <View style={{ position: 'absolute', left: 30, right: 30, top:0, bottom: 0, borderWidth: 1, backgroundColor: 'green' }} />
-          <View style={{width: 30, borderWidth: 1, position: 'absolute', right: 0, top:0, bottom: 0,}}/>
-        </View>
         <View style={{flexDirection: 'row', height: 30}}>
           <View style={{width: 30, borderWidth: 1}}/>
           <View style={{ flex:1, borderWidth: 1, backgroundColor: 'green' }} />

@@ -3,7 +3,7 @@
  */
 
 import {AppRegistry} from 'react-native';
-import App from './src/screens/SignInUI2';
+import App from './src/screens/SignInUI';
 import {name as appName} from './app.json';
 
 AppRegistry.registerComponent(appName, () => App);

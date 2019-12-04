@@ -12,12 +12,13 @@ import {
 import bgImage from '../image/background.jpg';
 import logo from '../image/logo.png';
 import Icon from 'react-native-vector-icons/Ionicons';
+import Input from '../components/Input';
 
 const {width: WIDTH} = Dimensions.get('window');
 
 export default class LoginUI extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       showPass: true,
       press: false,
@@ -34,6 +35,9 @@ export default class LoginUI extends Component {
   render() {
     return (
       <ImageBackground source={bgImage} style={styles.backgroundContainer}>
+        <Input placeholder="Username" leftIcon="ios-person" />
+        <Input showPass={this.state.showPass} />
+        <Input showPass={this.state.showPass} />
         <View style={styles.logoContainer}>
           <Image source={logo} style={styles.logo} resizeMode="contain" />
           <Text style={styles.logoText}>React Native</Text>
@@ -91,7 +95,7 @@ export default class LoginUI extends Component {
 const styles = StyleSheet.create({
   backgroundContainer: {
     flex: 1,
-    paddingHorizontal: 16,
+    padding: 30,
   },
   logoContainer: {
     alignItems: 'center',
