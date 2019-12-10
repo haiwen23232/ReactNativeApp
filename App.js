@@ -1,4 +1,3 @@
-/* eslint-disable react-native/no-inline-styles */
 /**
  * Sample React Native App
  * https://github.com/facebook/react-native
@@ -8,28 +7,28 @@
  */
 
 import React, {Component} from 'react';
-import {StyleSheet, Text, View} from 'react-native';
+import {StyleSheet, View, ImageBackground, StatusBar} from 'react-native';
+import bgImage from './src/image/background.jpg';
 
-export default class App extends Component {
+import Login from './src/screens/Login';
+
+export default class LoginUI extends Component {
   render() {
     return (
-      <View style={styles.container}>
-        <Text style={styles.instructions}>Hello World!</Text>
-      </View>
+      <ImageBackground source={bgImage} style={styles.backgroundContainer}>
+        <StatusBar backgroundColor="#1c313a" barStyle="light-content" />
+        <Login />
+      </ImageBackground>
     );
   }
 }
 
 const styles = StyleSheet.create({
-  container: {
+  backgroundContainer: {
     flex: 1,
+    width: null,
+    height: null,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
   },
 });
